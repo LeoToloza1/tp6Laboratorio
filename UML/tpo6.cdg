@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="tpo6">
+  <ClassDiagramComponents>
+    <Class name="DirecTelefonico" package="" visibility="public" xPosition="293.0" yPosition="270.0">
+      <Fields>
+        <Field name="registro" type="HashMap" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarCliente" returnType="boolean" visibility="public">
+          <Argument type="Cliente" name="c"/>
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="buscarCliente" returnType="String" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="buscarTelefono" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="buscarClientes" returnType="String" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="borrarCliente" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="861.0" yPosition="161.0">
+      <Fields>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="dni"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public"/>
+        <Method name="setCiudad" returnType="void" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="DirecTelefonico" target="Cliente" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
